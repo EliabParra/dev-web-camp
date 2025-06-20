@@ -99,4 +99,10 @@ class PaginasController {
             'eventos' => $eventos_formateados
         ]);
     }
+
+    public static function error(Router $router) {
+        $router->render('pages/error', [
+            'titulo' => 'Página no encontrada'
+        ]);
+    }
 }

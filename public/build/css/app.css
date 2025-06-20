@@ -774,6 +774,13 @@ h3 {
   font-weight: 700;
 }
 
+.page-404__container {
+  text-align: center;
+}
+.page-404__link {
+  color: #007df4;
+}
+
 .form {
   display: flex;
   flex-direction: column;
