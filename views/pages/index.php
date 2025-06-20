@@ -4,22 +4,22 @@
 
 <section class="resumen">
     <div class="resumen__grid">
-        <div class="resumen__bloque">
+        <div data-aos="fade-left" class="resumen__bloque">
             <p class="resumen__text resumen__text--numero"><?= $ponentes_total ?></p>
             <p class="resumen__text">Speakers</p>
         </div>
 
-        <div class="resumen__bloque">
+        <div data-aos="fade-right" class="resumen__bloque">
             <p class="resumen__text resumen__text--numero"><?= $conferencias_total ?></p>
             <p class="resumen__text">Conferencias</p>
         </div>
 
-        <div class="resumen__bloque">
+        <div data-aos="fade-left" class="resumen__bloque">
             <p class="resumen__text resumen__text--numero"><?= $workshops_total ?></p>
             <p class="resumen__text">Workshops</p>
         </div>
 
-        <div class="resumen__bloque">
+        <div data-aos="fade-right" class="resumen__bloque">
             <p class="resumen__text resumen__text--numero">500</p>
             <p class="resumen__text">Asistentes</p>
         </div>
@@ -32,7 +32,7 @@
 
     <div class="speakers__grid">
         <?php foreach($ponentes as $ponente) { ?>
-            <div class="speaker">
+            <div <?= aos_animation() ?> class="speaker">
                 <picture>
                     <source srcset="<?= $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen ?>.webp" type="image/webp">
                     <source srcset="<?= $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen ?>.png" type="image/png">

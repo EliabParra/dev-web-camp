@@ -25,3 +25,16 @@ function isAdmin() : bool {
     }
     return isset($_SESSION['admin']) && !empty($_SESSION['admin']);
 }
+function aos_animation() : string {
+    $animations = [
+        'fade-up',
+        'fade-down',
+        'fade-left',
+        'fade-right',
+        'zoom-in',
+        'zoom-in-up',
+        'zoom-in-down',
+        'zoom-out',
+    ];
+    return ' data-aos="' . $animations[array_rand($animations, 1)] . '" ';
+}
