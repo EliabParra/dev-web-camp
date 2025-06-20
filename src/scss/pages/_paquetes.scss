@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.paquetes {
+    &__grid {
+        @include m.contenedor;
+        @include m.grid(1, 3rem);
+        @include m.tablet {
+            @include m.grid(3, 3rem);
+            align-items: flex-start;
+        }
+    }
+
+}
+.paquete {
+    all: unset;
+    @include m.card;
+    &:nth-child(2) {
+        order: -1;
+        @include m.tablet {
+            order: unset;
+        }
+    }
+    transition: all .2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(.99)
+    }
+
+    &__beneficios {
+        @include m.reset-lista;
+        line-height: 2;
+    }
+    
+    &__precio {
+        font-size: 6rem;
+        font-weight: v.$black;
+        color: v.$azul;
+        text-align: center;
+        margin: 3rem 0 0 0;
+    }
+}
