@@ -11,9 +11,12 @@
         }
     }
 
+    &__submit {
+        @include m.boton(v.$azul, v.$blanco);
+        margin-top: 3rem;
+    }
 }
 .paquete {
-    all: unset;
     @include m.card;
     &:nth-child(2) {
         order: -1;
